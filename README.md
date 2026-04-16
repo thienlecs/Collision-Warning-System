@@ -1,35 +1,32 @@
 # Collision Warning System - KITTI Dataset
 
-This project implements a collision warning system using Object Detection (Faster R-CNN), Multi-object Tracking (SORT), Depth Estimation, and Time-to-Collision (TTC) calculations.
+This project implements a comprehensive collision warning system (CWS) using Object Detection (Faster R-CNN), Multi-object Tracking (SORT), Depth Estimation, and Time-to-Collision (TTC) calculations.
 
-## Project Structure
-- training/: Contains the training pipeline logic.
-  - dataset.py: KITTI dataset loader.
-  - model.py: Model architecture definition.
-  - config.py: Hyperparameter management.
-  - train.py: Training script.
-- utils/: Supporting modules for the inference pipeline.
-  - depth_estimation.py: Distance estimation based on bounding box geometry.
-  - ttc.py: Time-to-collision logic and alert leveling.
-  - roi_filter.py: Trajectory-based filtering to ignore off-path objects.
-  - sort.py: Multi-object tracking implementation.
-- cws_main.py: Main entry point for inference and visualization.
+## Dataset Information
 
-## Quick Start Walkthrough
+All datasets are sourced from the [KITTI Vision Benchmark Suite](https://www.cvlibs.net/datasets/kitti/index.php).
+
+- **Training Dataset**: Download from the **"2D Object"** section for model fine-tuning, then extract it to data/kitti_object.
+- **Inference Dataset**: Download from the **"Raw Data"** section for real-world simulation (continuous video sequences), then extract it to data/kitti_raw.
+## Getting Started
 
 ### 1. Environment Setup
-Install the necessary dependencies.
+Install the necessary dependencies:
+```bash
+pip install torch torchvision numpy opencv-python tqdm filterpy Pillow
+```
 
 ### 2. Model Training
-To train or fine-tune the model on the KITTI dataset:
-1. Configure settings in training/config.py.
-2. Run the training command from the root directory:
+To train the model on the KITTI 2D Object dataset:
+1. Update paths and hyperparameters in `training/config.py`.
+2. Execute the training script:
 ```bash
 python -m training.train
 ```
-### 3. Running the System (Inference)
-Execute the main pipeline:
+
+### 3. Running Inference
+To run the system on an image sequence:
 ```bash
 python cws_main.py
 ```
-Processed frames will be saved in the output_frames/ directory.
+Processed outputs, including bounding boxes, distance estimates, class labels, tracking IDs and collision alerts (Safe/Warning/Danger), will be visualized and saved.
