@@ -21,7 +21,7 @@ To train the model on the KITTI 2D Object dataset:
 1. Update paths and hyperparameters in `training/config.py`.
 2. Execute the training script:
 ```bash
-python -m training.train
+python -m training.FRCNN.train
 ```
 Skip training by downloading a sample model [Here](https://drive.google.com/drive/folders/1-XDiAl4l6JwK2WlM63dkqhSTyn5znF1U?usp=sharing) and placing it in the checkpoints/ directory.
 
