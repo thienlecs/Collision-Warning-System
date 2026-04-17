@@ -1,8 +1,0 @@
-__pycache__/
-checkpoints/
-output_frames/
-.gitignore/
-cws_video/
-video/
-data/
-.vscode/
