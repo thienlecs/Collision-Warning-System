@@ -23,9 +23,10 @@ To train the model on the KITTI 2D Object dataset:
 ```bash
 python -m training.train
 ```
+Skip training by downloading a sample model [Here](https://drive.google.com/drive/folders/1-XDiAl4l6JwK2WlM63dkqhSTyn5znF1U?usp=sharing) and placing it in the checkpoints/ directory.
 
 ### 3. Running Inference
-To run the system on an image sequence:
+To run the system on an image sequence (dataset required):
 ```bash
 python cws_main.py
 ```

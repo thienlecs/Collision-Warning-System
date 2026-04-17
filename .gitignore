@@ -1,7 +1,8 @@
 __pycache__/
-checkpoints1/
+checkpoints/
 output_frames/
-.gitignore
+.gitignore/
 cws_video/
 video/
-data1/
+data/
+.vscode/

@@ -4,9 +4,9 @@ BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 RAW_DATA_PATH = os.path.join(BASE_PATH, "data", "kitti_raw")
 SEQ_PATH = os.path.join(
     RAW_DATA_PATH,
-    "2011_09_26_drive_0029_sync",
+    "2011_09_26_drive_0059_sync",
     "2011_09_26",
-    "2011_09_26_drive_0029_sync",
+    "2011_09_26_drive_0059_sync",
     "image_02",
     "data",
 )
